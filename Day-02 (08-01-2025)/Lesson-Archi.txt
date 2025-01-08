@@ -1,0 +1,32 @@
+Start date: 07-01-2025
+Github-Repo: https://github.com/milandas63/Archi_KIIT
+
+Milan Das           7978168568
+Archi Kanungo       7978665518      archi.kanungo2004@gmail.com		archiik04
+
++----------------------+
+|  Tuesday 07-01-2025  |	Day-01
++----------------------+
+	=	Class Hello
+	=   Underline the greet text
+    =   The for loop:
+            for([initializer]; [condition]; [increment|decrement]) [{}]
+
+        Example:
+            for(;;) System.out.println("Hello Archi");
+
++------------------------+
+|  Wednesday 08-01-2025  |	Day-02
++------------------------+
+    =   Software Installation
+        >   JDK version 8
+        >   JDK documentation version 8
+        >   Eclipse Oxygen
+
+    =   Practice programmes
+        a)  Draw a triangle of asterisks?
+        b)  Draw a diamond style of asterisks?
+        c)  Draw a triangle of palindrome numbers?
+        d)  Draw a outline of a triangle using stars?
+
+
