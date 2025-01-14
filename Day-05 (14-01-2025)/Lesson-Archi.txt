@@ -1,0 +1,246 @@
+Start date: 07-01-2025
+Github-Repo: https://github.com/milandas63/Archi_KIIT
+
+Milan Das           7978168568
+Archi Kanungo       7978665518      archi.kanungo2004@gmail.com		archiik04
+
++----------------------+
+|  Tuesday 07-01-2025  |	Day-01
++----------------------+
+	=	Class Hello
+	=   Underline the greet text
+    =   The for loop:
+            for([initializer]; [condition]; [increment|decrement]) [{}]
+
+        Example:
+            for(;;) System.out.println("Hello Archi");
+
++------------------------+
+|  Wednesday 08-01-2025  |	Day-02
++------------------------+
+    =   Software Installation
+        >   JDK version 8
+        >   JDK documentation version 8
+        >   Eclipse Oxygen
+
+    =   Practice programmes
+        a)  Draw a triangle of asterisks?
+        b)  Draw a diamond style of asterisks?
+        c)  Draw a triangle of palindrome numbers?
+        d)  Draw a outline of a triangle using stars?
+
+
++----------------------+
+| Thursday 09-01-2025  |	Day-03
++----------------------+
+    =   Algorithmic questions
+        a)  Draw a outline of a triangle using stars?
+        b)  Draw a triangle of palindrome alphabets?
+        c)  Draw the figure shown below
+            1               1
+            12             21
+            123           321
+            1234         4321
+            12345       54321
+            123456     654321
+            1234567   7654321
+            12345678 87654321
+            12345678987654321
+
++--------------------+
+| Friday 10-01-2025  |	Day-04
++--------------------+
+    =   How many keywords are there in Java?
+            LIST OF RESERVE WORDS/KEY WORDS IN JAVA (53 words)
+            abstract    continue    for         new         switch
+            assert***   default     goto*       package     synchronized
+            boolean     do          if          private     this
+            break       double      implements  protected   throw
+            byte        else        import      public      throws
+            case        enum****    instanceof  return      transient
+            catch       extends     int         short       try
+            char        final       interface   static      void
+            class       finally     long        strictfp**  volatile
+            const*      float       native      super       while
+            null        true        false
+
+            *       not used
+            **      added in 1.2
+            ***     added in 1.4
+            ****    added in 5.0
+
+    =   Java is fully typed language. When you create a variable, the first thing you
+        say is the type of the variable. Suppose you want to create a variable name,
+        the first thing to say is what type of variable is name.
+
+            String name;
+            int age;
+            boolean passed;
+
+    =   There are 2 types of data types in Java.
+        a)  Primitive data type
+                TYPE        KIND            RANGE                       WRAPPER-CLASSES
+            ---------------------------------------------------------------------------
+            1.  byte        Integer         -128 to +127                java.lang.Byte
+            2.  short       Integer         -32768 to 32767             java.lang.Short
+            3.  int*        Integer         -2147483648 to 2147483647   java.lang.Integer
+            4.  long        Integer         -9223372036854775808 to     java.lang.Long
+                                            +9223372036854775807
+            5.  float       Floating Point  32 bits                     java.lang.Float
+            6.  double*     Floating Point  64 bits                     java.lang.Double
+            7.  char        Unicode         16 bit                      java.lang.Character
+            8.  boolean     True/False      1 bit                       java.lang.Boolean
+
+            * indicates the default data type
+
+            short s = 10
+            142.50
+        
+        b)  Reference data type
+            Rest everthing in Java world is reference data type or object data type.
+
+    =   VAriables are of two types:
+        1.  Global variable
+            In case of global variables, the following values are automatically assigned:
+                Integer         0
+                Floating point  0.00
+                char            \0
+                boolean         false
+                Reference type  null
+        2.  Local variable
+
+    =   How is an array defined?
+        =   Array are normally defined within curly brackets:
+            String[] students = {"Archi","Milan","Deepak","Santosh","Okay"};
+
+
++---------------------+
+| Tuesday 14-01-2025  |	 Day-05
++---------------------+
+    =   Hierarchy of Java classes:
+        Java classes reside within a package.
+        Example:
+            java.lang
+            +- String
+            +- StringBuffer
+            +- StringBuilder
+            +- ClassA
+            +- ClassB
+            java.util
+            +- Date
+            +- StringTokenizer
+            +- ClassB
+            +- ClassC
+
+    =   One class may access another class by 2 ways:
+        1.  By object reference
+            
+            class Example {
+                public void run() {
+                    String s = new String("Hello World");
+                    System.out.println(s.charAt(10));           //  l
+                }
+            }
+        2.  By inheritance
+
+            class Sample extends Example {
+                public void work() {
+                    System.out.println(run());
+                }
+            }
+    
+    =   In Java a program is written within a class. The class is a wrapper over the
+        program. To create a class, the keyword class is used. The following syntax
+        is used to create a class:
+            [access-specifier] [modifier] class <className> [extends <parentClass>] [implements <interface[, <interface>, ....] {}
+
+            [access-specifier]
+            [modifier]
+            class <className>
+            [extends <parentClass>]
+            [implements <interface[, <interface>, ....]
+            {}
+
+    =   access-specifier:
+        Certain keywords are used to specify the level of access allowed on that class.
+        There are 3 keywords and 4 access-specifiers:
+        1.  public
+            Any class from the same packge or from another package may access by object
+            reference or by inheritance
+        2.  protected
+            Any class from the same package may access another class by both, object 
+            reference or by inhertance. But if it is from another package, only object
+            reference is allowed and inheritance is restricted.
+        3.  private
+            A private class is simply restricted to be used.
+        4.  <undefined>
+            A undefined class is similar to protected class. Only when the target class
+            is in a different package, it is allowed in inherit and object reference is
+            restricted.
+
+    =   APPLIED RULES
+       --------------------------------------------------------------------------
+                                                    OUTER   INNER   OUTER   INNER
+        SL  MODIFIER        FIELD   METHOD  CONSTR  CLASS   CLASS  INTERF  INTERF
+       --------------------------------------------------------------------------
+        1.  public          yes     yes     yes     yes     no      yes     no
+        2.  protected       yes     yes     yes     no      yes     no      yes
+        3.  private         yes     yes     yes     no      yes     no      yes
+        4.  <undefined>     yes     yes     yes     yes     no      yes     no
+       --------------------------------------------------------------------------
+        5.  abstract        no      yes     no      yes     yes     yes     yes
+        6.  final           yes     yes     no      yes     yes     no      no
+        7.  static          yes     yes     no      no      yes     no      yes
+        8.  native          no      yes     no      no      no      no      no
+        9.  synchronized    no      yes     no      no      no      no      no
+       10.  transient       yes     no      no      no      no      no      no
+       11.  volatile        yes     no      no      no      no      no      no
+       12.  strictfp        no      yes     no      yes     yes     yes     yes
+       --------------------------------------------------------------------------
+
+    =   What are the members of a class?
+        There are normally 3 members of a class:
+        1.  Field/Global-variable member
+        2.  Constructor member
+        3.  Method/Function member
+
+        class Hello {
+            // Fields
+            public String name = "James Gosling";
+            public int age = 72;
+            public char gender = 'M';
+
+            // Constructor
+            public Hello() {
+            }
+
+            public Hello(String name, int age, char gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+
+            // Methods
+            public int getWeight() {
+                .....
+            }
+            public int getComplexion() {
+                .....
+            }
+            public int getHeight() {
+                .....
+            }
+
+            // Inner classes
+            class InnerClass() {
+                // Field
+                // Constructor
+                // Methods
+            }
+        }
+
+    =   ASSIGNMENT:
+        WAP to print 10 numbers in the following series:
+        1)  1,  3,  5,  11,   21, ......      (n, n*2-1, n*2+1, n*2-1, n*2+1, ...
+        2)  1,  2,  6,  42, 1806, ......      (n*nth+nth), when n starts from 1
+
