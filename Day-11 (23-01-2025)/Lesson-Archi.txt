@@ -671,10 +671,10 @@ Archi Kanungo       7978665518      archi.kanungo2004@gmail.com		archiik04
             |  |  |  +- UsernameException
             |  |  |  |  +- FirstCharacterException
             |  |  |  |  +- MinimumEightCharacterException
-            |  |  |  |  +- 
-            |  |  |  |  +- 
+            |  |  |  |  +- SpecialCharacterException
+            |  |  |  |  +- NumberException
             |  |  |  +- PasswordException
             |  |  |  |  +- TooLongPasswordException
-            |  |  |  |  +- 
-            |  |  |  |  +- 
-            |  |  |  |  +- 
+            |  |  |  |  +- TooShortException
+            |  |  |  |  +- SymbolException
+            |  |  |  |  +- SpaceException
