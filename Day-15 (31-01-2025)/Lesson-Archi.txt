@@ -781,3 +781,11 @@ Archi Kanungo       7978665518      archi.kanungo2004@gmail.com		archiik04
     =   java.util.StringTokenizer
         It split a string from a distinguished character
 
+    =   Java has provided API (classes and packages) to develop GUI programs.
+        There are 2 packages in Java which provide GUI classes.
+        1.  java.awt.*          Old and obsolate
+        2.  javax.swing.*
+
+        The swing package provides a set of container and components. Components are
+        added on the container.
+
