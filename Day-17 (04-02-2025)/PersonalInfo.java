@@ -1,4 +1,4 @@
-package com.gui;
+package com.first;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -7,6 +7,13 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -75,6 +82,36 @@ public class PersonalInfo extends JFrame {
 					System.exit(0);
 				}
 			});
+			btnSave.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent ae) {
+					String name = tfName.getText();
+					String parent = tfParent.getText();
+					String location = tfLocation.getText();
+					String mobile = tfMobile.getText();
+					String email = tfEmail.getText();
+					String data = "\"" + name + "\",\"" + parent + "\",\"" + location + "\",\"" + mobile + "\",\"" + email + "\"\r\n";
+		            	 try {
+		         			FileOutputStream fos = new FileOutputStream("date.csv");
+		         			fos.write(data.getBytes());
+		         			fos.close();
+		         			tfName.setText("");
+		         			tfName.setText("");
+		         			tfName.setText("");
+		         			tfName.setText("");
+		         			tfName.setText("");
+		         			tfName.setText("");
+		            	 } catch(FileNotFoundException e) {
+		            		 System.out.println(e);
+		            	 } catch(IOException e) {
+		            		 System.out.println(e);
+		            	 } catch(Exception e) {
+		            		 System.out.println(e);
+		            	 }
+					
+				}
+			});
+			
+			
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBounds(400, 150, 500, 350);
