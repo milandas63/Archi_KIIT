@@ -1,0 +1,1125 @@
+Start date: 07-01-2025
+Github-Repo: https://github.com/milandas63/Archi_KIIT
+
+Milan Das           7978168568
+Archi Kanungo       7978665518      archi.kanungo2004@gmail.com		archiik04
+
++----------------------+
+|  Tuesday 07-01-2025  |	Day-01
++----------------------+
+	=	Class Hello
+	=   Underline the greet text
+    =   The for loop:
+            for([initializer]; [condition]; [increment|decrement]) [{}]
+
+        Example:
+            for(;;) System.out.println("Hello Archi");
+
++------------------------+
+|  Wednesday 08-01-2025  |	Day-02
++------------------------+
+    =   Software Installation
+        >   JDK version 8
+        >   JDK documentation version 8
+        >   Eclipse Oxygen
+
+    =   Practice programmes
+        a)  Draw a triangle of asterisks?
+        b)  Draw a diamond style of asterisks?
+        c)  Draw a triangle of palindrome numbers?
+        d)  Draw a outline of a triangle using stars?
+
+
++----------------------+
+| Thursday 09-01-2025  |	Day-03
++----------------------+
+    =   Algorithmic questions
+        a)  Draw a outline of a triangle using stars?
+        b)  Draw a triangle of palindrome alphabets?
+        c)  Draw the figure shown below
+            1               1
+            12             21
+            123           321
+            1234         4321
+            12345       54321
+            123456     654321
+            1234567   7654321
+            12345678 87654321
+            12345678987654321
+
++--------------------+
+| Friday 10-01-2025  |	Day-04
++--------------------+
+    =   How many keywords are there in Java?
+            LIST OF RESERVE WORDS/KEY WORDS IN JAVA (53 words)
+            abstract    continue    for         new         switch
+            assert***   default     goto*       package     synchronized
+            boolean     do          if          private     this
+            break       double      implements  protected   throw
+            byte        else        import      public      throws
+            case        enum****    instanceof  return      transient
+            catch       extends     int         short       try
+            char        final       interface   static      void
+            class       finally     long        strictfp**  volatile
+            const*      float       native      super       while
+            null        true        false
+
+            *       not used
+            **      added in 1.2
+            ***     added in 1.4
+            ****    added in 5.0
+
+    =   Java is fully typed language. When you create a variable, the first thing you
+        say is the type of the variable. Suppose you want to create a variable name,
+        the first thing to say is what type of variable is name.
+
+            String name;
+            int age;
+            boolean passed;
+
+    =   There are 2 types of data types in Java.
+        a)  Primitive data type
+                TYPE        KIND            RANGE                       WRAPPER-CLASSES
+            ---------------------------------------------------------------------------
+            1.  byte        Integer         -128 to +127                java.lang.Byte
+            2.  short       Integer         -32768 to 32767             java.lang.Short
+            3.  int*        Integer         -2147483648 to 2147483647   java.lang.Integer
+            4.  long        Integer         -9223372036854775808 to     java.lang.Long
+                                            +9223372036854775807
+            5.  float       Floating Point  32 bits                     java.lang.Float
+            6.  double*     Floating Point  64 bits                     java.lang.Double
+            7.  char        Unicode         16 bit                      java.lang.Character
+            8.  boolean     True/False      1 bit                       java.lang.Boolean
+
+            * indicates the default data type
+
+            short s = 10
+            142.50
+
+        b)  Reference data type
+            Rest everthing in Java world is reference data type or object data type.
+
+    =   VAriables are of two types:
+        1.  Global variable
+            In case of global variables, the following values are automatically assigned:
+                Integer         0
+                Floating point  0.00
+                char            \0
+                boolean         false
+                Reference type  null
+        2.  Local variable
+
+    =   How is an array defined?
+        =   Array are normally defined within curly brackets:
+            String[] students = {"Archi","Milan","Deepak","Santosh","Okay"};
+
+
++---------------------+
+| Tuesday 14-01-2025  |	 Day-05
++---------------------+
+    =   Hierarchy of Java classes:
+        Java classes reside within a package.
+        Example:
+            java.lang
+            +- String
+            +- StringBuffer
+            +- StringBuilder
+            +- ClassA
+            +- ClassB
+            java.util
+            +- Date
+            +- StringTokenizer
+            +- ClassB
+            +- ClassC
+
+    =   One class may access another class by 2 ways:
+        1.  By object reference
+
+            class Example {
+                public void run() {
+                    String s = new String("Hello World");
+                    System.out.println(s.charAt(10));           //  l
+                }
+            }
+        2.  By inheritance
+
+            class Sample extends Example {
+                public void work() {
+                    System.out.println(run());
+                }
+            }
+
+    =   In Java a program is written within a class. The class is a wrapper over the
+        program. To create a class, the keyword class is used. The following syntax
+        is used to create a class:
+            [access-specifier] [modifier] class <className> [extends <parentClass>] [implements <interface[, <interface>, ....] {}
+
+            [access-specifier]
+            [modifier]
+            class <className>
+            [extends <parentClass>]
+            [implements <interface[, <interface>, ....]
+            {}
+
+    =   access-specifier:
+        Certain keywords are used to specify the level of access allowed on that class.
+        There are 3 keywords and 4 access-specifiers:
+        1.  public
+            Any class from the same packge or from another package may access by object
+            reference or by inheritance
+        2.  protected
+            Any class from the same package may access another class by both, object
+            reference or by inhertance. But if it is from another package, only object
+            reference is allowed and inheritance is restricted.
+        3.  private
+            A private class is simply restricted to be used.
+        4.  <undefined>
+            A undefined class is similar to protected class. Only when the target class
+            is in a different package, it is allowed in inherit and object reference is
+            restricted.
+
+    =   APPLIED RULES
+       --------------------------------------------------------------------------
+                                                    OUTER   INNER   OUTER   INNER
+        SL  MODIFIER        FIELD   METHOD  CONSTR  CLASS   CLASS  INTERF  INTERF
+       --------------------------------------------------------------------------
+        1.  public          yes     yes     yes     yes     no      yes     no
+        2.  protected       yes     yes     yes     no      yes     no      yes
+        3.  private         yes     yes     yes     no      yes     no      yes
+        4.  <undefined>     yes     yes     yes     yes     no      yes     no
+       --------------------------------------------------------------------------
+        5.  abstract        no      yes     no      yes     yes     yes     yes
+        6.  final           yes     yes     no      yes     yes     no      no
+        7.  static          yes     yes     no      no      yes     no      yes
+        8.  native          no      yes     no      no      no      no      no
+        9.  synchronized    no      yes     no      no      no      no      no
+       10.  transient       yes     no      no      no      no      no      no
+       11.  volatile        yes     no      no      no      no      no      no
+       12.  strictfp        no      yes     no      yes     yes     yes     yes
+       --------------------------------------------------------------------------
+
+    =   What are the members of a class?
+        There are normally 3 members of a class:
+        1.  Field/Global-variable member
+        2.  Constructor member
+        3.  Method/Function member
+
+        class Hello {
+            // Fields
+            public String name = "James Gosling";
+            public int age = 72;
+            public char gender = 'M';
+
+            // Constructor
+            public Hello() {
+            }
+
+            public Hello(String name, int age, char gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+
+            // Methods
+            public int getWeight() {
+                .....
+            }
+            public int getComplexion() {
+                .....
+            }
+            public int getHeight() {
+                .....
+            }
+
+            // Inner classes
+            class InnerClass() {
+                // Field
+                // Constructor
+                // Methods
+            }
+        }
+
+    =   ASSIGNMENT:
+        WAP to print 10 numbers in the following series:
+        1)  1,  3,  5,  11,   21, ......      (n, n*2-1, n*2+1, n*2-1, n*2+1, ...
+        2)  1,  2,  6,  42, 1806, ......      (n*nth+nth), when n starts from 1
+
++-----------------------+
+| Wednesday 15-01-2025  |	Day-06
++-----------------------+
+    =   How to create a class?
+    =   The structure of the member of the class:
+        1.  Field member
+            Global variables are called fields.
+            The syntax for creating a field:
+                [access-specifier]
+                [modifier..]
+                <data-type> <variable-name>
+                [= values];
+
+                int age;
+                String name = "James Gosling";
+                public boolean pass = false;
+                public final static String designation = "Manager";
+
+        2.  Constructor member
+            The name of the constructor must be same with the class name.
+            The constructors are used to instanciate the class to an object:
+
+            Primary     s1   s2  s3        c1  c2        math      <--- object
+                         \   |   /         |   /           |
+                ----------\--|--/----------|--/------------|------ instanciation
+                           \ | /           | /             |
+            Secondary       \|/            |/              |
+                          String         Class           Math      <--- class
+
+            String s1 = new String();
+            String s2 = new String();
+            Class c1 = Class.forName("java.lang.String");
+            Math math = new Math();
+
+            The syntax for creating a constructor:
+                [access-specifier]
+                <className>([parameter-list])
+                [throws <exceptionClass,....]
+                {}
+
+        3.  Method member
+            The methods are also known as functions. They are small unit of reusable
+            code that may return some result.
+
+            The syntax of a method is:
+                [access-specifier]
+                [modifier...]
+                <return-type|void>
+                <method-name>([parameter-list,....])
+                [throws <exceptionClass,....]
+                {}
+
+    =   We will examine 3 modifiers of Java, i.e. final, static & abstract.
+        In an Object Oriented Programming language the application is split across
+        different classes. All the classes are assembled into one big class that
+        becomes the application.
+
+        OOPs is a paradim for writing computer programs.
+        The program code is wrapped within a class.
+        The features of OOPs are as follows:
+        1.  Encapsulation
+            >   Abstraction
+        2.  Inheritance
+        3.  Polymorphism
+
+    =   Encapsulation:
+        Encapsulation provides facilities to combine data and program code together.
+
+        public class SolarSystem {
+            private String parent = "Sun";
+            private String child = "Planet";
+
+            public String getParent() {
+                return parent;
+            }
+
+            public void setParent(String p) {
+                parent = p;
+            }
+        }
+
+    =   Inheritance:
+        Java classes must inherit java.lang.Object to become a valid Java class.
+
+        +- Object
+        |  +- Example
+        |  |  +- Sample
+        |  |  |  +- Another
+
+        One class in Java can inherit only another one class. Java allows single
+        inheritance. Multiple inhertance is restricted. C++, Python, and many other
+        languages allow multiple inheritance.
+
+        When a class inherits another class, the properties of the inherited class
+        automatically belongs to inherting class.
+
+        A child class is instanciated to create the object of parent class.
+            Example e1 = new Sample();
+            Example e2 = new Another();
+
+        Pedelogy:
+
+            LANGUAGE    FATHER  CHILD
+            C++         Base    Derived
+            Python      Parent  Child
+            Java        Super   Sub
+
++----------------------+
+| Thursday 16-01-2025  |	Day-07
++----------------------+
+    =   Polymorphism:
+        Giving same name to multiple members is known polymorphism.
+        Polymorphism are of two types:
+        1.  Overloading
+            When methods have same name in the same class, it known as overloading
+            of methods.
+        2.  Overriding
+            When two methods have same name and same parameter list in the super class
+            and in sub class, it known overriding of methods. In overriding, the parent
+            class method is hidden.
+
+                Useful uf = new Culture();
+                uf.calculate(125,5);
+
+    =   Example of Overloading
+        public class Useful {
+            public void calculate() {
+            }
+
+            public void calculate(int n, int y) {
+            }
+
+            public void calculate(double n, int y) {
+            }
+        }
+
+    =   Example of Overriding
+        public class Culture extends Useful {
+            public void calculate(int n, int y) {
+            }
+        }
+
+    =   What is final modifier?
+        The final modifier is applied to class, field and method
+        >   If the final modifier is applied to a class, the same class can't be inherited.
+        >   If the final modifier is applied to a field, the value of the field can't change.
+        >   If a method is final, the same method is restricted to be overrided.
+
+    =   What is static modifier?
+        The static modifier may be applied to field and a method
+        >   If the static modifer is applied to a field, the field may be called by class
+            name reference
+        >   All instances of the class in which the static field exists, share common
+            memory location.
+        >   If a method is static, the same method may be called by class name reference.
+
+            class Founder {
+                public static String name = "James Gosling";
+                public static void run() {
+                    System.out.println("I am a hero!");
+                }
+            }
+
+            class Work {
+                public static void main(String[] args) {
+                    Founder f = new Founder();
+                    System.out.println(f.name);         //  Wrong way
+                    System.out.println(Founder.name)    //  Right way
+                    f.run();                            //  Wrong way
+                    Founder.run();                      //  Right way
+                }
+            }
+
+            class Politics {
+                public static String father = "Jawaharlal Nehru";
+                public String daughter = "Indira Gandhi";
+            }
+
+            class Kingdom {
+                public void go() {
+                    Politics p1 = new Politics();
+                    Politics p2 = new Politics();
+                    Politics p3 = new Politics();
+                    p2.father = "Biju Patnaik";
+                    p2.daughter = "Rani Patnaik";
+                }
+            }
+
+                    p1            p2             p3
+            +--------------------------------------------------------------+
+      father|                Biju Patnaik                |                 |
+            +--------------------------------------------+-----------------+
+    daughter| Indira Gandhi|Rani Patnaik  | Indira Gandhi|                 |
+            +--------------------------------------------------------------|
+            |                                                              |
+            |                                                              |
+            |                                                              |
+            |                                                              |
+            +--------------------------------------------------------------+
+
++--------------------+
+| Monday 20-01-2025  |	Day-08
++--------------------+
+    =   JDK 8.0 contains 4240 classes across 217 packages.
+    =   Among the list of 4240 classes all the classes of java.lang package is
+        implicitly imported.
+        >   Rest all classes of other packages have to be explicitly imported.
+    =   java.lang.Byte
+        java.lang.Short
+        java.lang.Integer
+        java.lang.Long
+        java.lang.Float
+        java.lang.Double
+        java.lang.Character
+        java.lang.Boolean
+
+        The above classes are called wrapper classes. It is called wrapper classes
+        because it wraps the primitive data around.
+
+            int n = 256;
+            Integer i = 256;
+            double amt = 35678.50;
+            Double amount = 35678.50;
+            float money = new Float(345.60);
+
+        In case of wrapper classes, the auto-casting of primitive data type into object
+        data type and vice-versa is automatic. The data is implicitly casted.
+
+    =   The String class exists inside the java.lang package. It needn't be imported
+        but still can be used because all classes of java.lang package are implicitly
+        imported.
+
+        The String class is immutable. Once assigned, the content of the String class 
+        can't be changed.
+            String name = "Archi Kanungo";
+            name = "Something else";
+
+            String daughter = "Archi Kanungo";
+            String another = "Archi Kanungo";
+
+        Java doesn't misuse the memory when the String value of several variables are
+        same. The variabes, name, daughter and another contain same value, "Archi Kanungo".
+
+                +-----------------------------------------------+
+        name    | Archi Kanungo                                 |
+                +-----------------------------------------------+    Wrong
+        daughter| Archi Kanungo                                 |    Presentation
+                +-----------------------------------------------+
+        another | Archi Kanungo                                 |
+                +-----------------------------------------------+
+
+        Java doesn't keep the data in the way shown above. 
+        Java keeps the String data in a matrix called StringPool.
+
+            String Pool
+            +-----------------------------------------------+
+          0 | Archi Kanungo                                 |
+            +-----------------------------------------------+
+          1 | KIIT                                          |
+            +-----------------------------------------------+
+          2 | Arichi Mohanty                                |
+            +-----------------------------------------------+
+          3 |                                               |
+            +-----------------------------------------------+
+          4 |                                               |
+            +-----------------------------------------------+
+          5 |                                               |
+            +-----------------------------------------------+
+            |                                               |
+            +-----------------------------------------------+
+            |                                               |
+
+        name = sp[0]
+        daughter = sp[0]
+        another = sp[0]
+        String girl = "Archi Mohanty";  sp[2]
+
+    =   For changable string, StringBuffer and StringBuilder classes are provided.
+        These classes have function that may be used to change the content of the object.
+
+        These classes provide functions like:
+            append
+            insert
+            delete
+        to make changes to the object.
+
+    =   There is a Math classes that provide function for many mathematical operations.
+
+
++---------------------+
+| Tuesday 21-01-2025  |	 Day-09
++---------------------+
+    =   Reengineering of Java Byte code back to Java Source code.
+        This process is called reflection
+
+    =   Check the file com.packages.Example.java
+
+
++-----------------------+
+| Wednesday 22-01-2025  |	 Day-10
++-----------------------+
+    =   What is Exception Handling?
+        Exception Handling is a fault resistance technique implemented within a computer
+        programming language.
+
+    =   For handling faults the Java programming language provides a keyword called "try".
+        The try statement is followed by a block and contains another 2 clauses. These
+        clauses are "catch" and "finally".
+
+            try {
+                .......
+                .......
+                .......
+                .......
+                .......
+            } catch(ExceptionName1 e) {
+                // message may be given to the user
+            } catch(ExceptionName2 e) {
+                // message may be given to the user
+            } catch(ExceptionName3 e) {
+                // message may be given to the user
+            } finally {
+            }
+
+        The program is written within the try block. In case an exception occurs within
+        the try block an exception object is generated and the following lines are abondaned.
+        The exception object is then matched with the exception variable "e". Whichever
+        exception variable of the catch clause matches the object is stored in that 
+        matching variable and the corresponding block of catch clause is executed.
+
+    =   Exception is a class like any other class. This class must inherit the Throwable
+        class to become an Exception class. Any class that inherits the Throwable class
+        is considered an exception class.
+
+    =   There are 2 types of exceptions:
+        1.  Checked exception
+            >   In case of checked exception java check if posibility of exception given in 
+                the catch clause is really being generated from the try block.
+            >   Again if the exception that is likely to be thrown from the try block
+                doesn't have a matching catch clause.
+        2.  Unchecked exception
+            >   Any exception class that inherits the RuntimeException becomes an unchecked
+                exception.
+
+    =   The structure of an exception class:
+
+        Object
+        +- Throwable
+        |  +- Exception
+        |  |  +- AclNotFoundException
+        |  |  +- ActivationException
+        |  |  |  +- UnknownGroupException
+        |  |  |  +- UnknownObjectException
+        |  |  +- AlreadyBoundException
+        |  |  +- ApplicationException
+        |  |  +- AWTException
+        |  |  +- BackingStoreException
+        |  |  +- BadAttributeValueExpException
+        |  |  +- BadBinaryOpValueExpException
+        |  |  +- BadLocationException
+        |  |  +- BadStringOperationException
+        |  |  +- BrokenBarrierException
+        |  |  +- CertificateException
+        |  |  +- CloneNotSupportedException
+        |  |  +- DataFormatException
+        |  |  +- DatatypeConfigurationException
+        |  |  +- DestroyFailedException
+        |  |  +- ExecutionException
+        |  |  +- ExpandVetoException, FontFormatException, GeneralSecurityException, GSSException, IllegalClassFormatException, InterruptedException, IntrospectionException, InvalidApplicationException, InvalidMidiDataException, InvalidPreferencesFormatException, InvalidTargetObjectTypeException, IOException, JAXBException, JMException, KeySelectorException, LambdaConversionException, LastOwnerException, LineUnavailableException, MarshalException, MidiUnavailableException, MimeTypeParseException, MimeTypeParseException, NamingException, NoninvertibleTransformException, NotBoundException, NotOwnerException, ParseException, ParserConfigurationException, PrinterException, PrintException, PrivilegedActionException, PropertyVetoException, ReflectiveOperationException, RefreshFailedException, RemarshalException, 
+        |  |  +- RuntimeException
+        |  |  |  +- AnnotationTypeMismatchException
+        |  |  |  +- ArithmeticException
+        |  |  |  +- ArrayStoreException
+        |  |  |  +- BufferOverflowException
+        |  |  |  +- BufferUnderflowException, CannotRedoException, CannotUndoException, ClassCastException, CMMException, CompletionException, ConcurrentModificationException, DataBindingException, DateTimeException, DOMException, EmptyStackException, EnumConstantNotPresentException, EventException, FileSystemAlreadyExistsException, FileSystemNotFoundException, IllegalArgumentException, IllegalMonitorStateException, IllegalPathStateException, IllegalStateException, IllformedLocaleException, ImagingOpException, IncompleteAnnotationException, IndexOutOfBoundsException, JMRuntimeException, LSException, MalformedParameterizedTypeException, MalformedParametersException, MirroredTypesException, MissingResourceException, NegativeArraySizeException, NoSuchElementException, NoSuchMechanismException, NullPointerException, ProfileDataException, ProviderException, ProviderNotFoundException, RasterFormatException, RejectedExecutionException, SecurityException, SystemException, TypeConstraintException, TypeNotPresentException, UncheckedIOException, UndeclaredThrowableException, UnknownEntityException, UnmodifiableSetException, UnsupportedOperationException, WebServiceException, WrongMethodTypeException
+        |  |  +- SAXException
+        |  |  +- ScriptException
+        |  |  +- ServerNotActiveException, SOAPException, SQLException, TimeoutException, TooManyListenersException, TransformerException, TransformException, UnmodifiableClassException, UnsupportedAudioFileException, UnsupportedCallbackException, UnsupportedFlavorException, UnsupportedLookAndFeelException, URIReferenceException, URISyntaxException, UserException, XAException, XMLParseException, XMLSignatureException, XMLStreamException, XPathException
+        |  +- Error
+
++----------------------+
+| Thursday 23-01-2025  |   Day-11
++----------------------+
+    =   User defined exceptions
+        CASE Study:
+
+        A certain country wants to print the voter-id card of its citizens. Citizens
+        who are 18 years old or more but 90 year old and less are allowed to vote.
+        So the voter-id card must be issued to eligible candidates.
+
+        int ages[] = {25,43,99,78,15,18,11,0,55,30,-24,66,81,93};
+
+        Object
+        +- Throwable
+        |  +- Exception
+        |  |  +- AgeException
+        |  |  |  +- AgeCeilingException
+        |  |  |  |  +- TooYoungAgeException
+        |  |  |  |  +- TooOldAgeException
+        |  |  |  +- InvalidAgeException
+        |  |  |  |  +- NegativeAgeException
+        |  |  |  |  +- ZeroAgeException
+
+        Write a program to test the ages array and print the ages with their validity.
+
+    =   What is the work of super?
+        It calls the matching constructor of the immediate super class.
+
+    =   Write a Login program to take the username and the password from the user.
+        Check the validity of the username and password matching it with an array.
+        If any exception occurs print the same on the screen.
+
+            String validUsers[][] = { {"Archi","kanungo"},
+                                      {"Milan","das"},
+                                      {"Rashmi","pradhan"},
+                                      {"Narendra","modi"},
+                                      {"Sonali","das"},
+                                      {"Subhasis","parida"},
+                                    };
+
+            Object
+            +- Throwable
+            |  +- Exception
+            |  |  +- LoginException
+            |  |  |  +- UsernameException
+            |  |  |  |  +- FirstCharacterException
+            |  |  |  |  +- MinimumEightCharacterException
+            |  |  |  |  +- 
+            |  |  |  |  +- 
+            |  |  |  +- PasswordException
+            |  |  |  |  +- TooLongPasswordException
+            |  |  |  |  +- 
+            |  |  |  |  +- 
+            |  |  |  |  +- 
+
++--------------------+
+| Monday 27-01-2025  |   Day-12
++--------------------+
+    =   java.io
+        Java provides a package in the name java.io to do all input and output operations
+        with the computer. Java treats the data across streams. Java provides two types
+        of streams:
+        1.  ByteStream (8 bit r/w)
+            +- InputStream
+            |  +- AudioInputStream
+            |  +- ByteArrayInputStream
+            |  +- FileInputStream
+            |  +- FilterInputStream
+            |  +- ObjectInputStream
+            |  +- PipedInputStream
+            |  +- SequenceInputStream
+            |  +- StringBufferInputStream
+            +- OutputStream
+            |  +- ByteArrayOutputStream
+            |  +- FileOutputStream
+            |  +- FilterOutputStream
+            |  +- ObjectOutputStream
+            |  +- PipedOutputStream
+
+        2.  CharacterStream (16 bit r/w)
+            +- Reader
+            +- Writer
+
+
+    public abstract class Incomplete {
+        public String getName() {
+            return "Howlet Packard";
+        }
+
+        public abstract void hello();
+    }
+
++---------------------+
+| Tuesday 28-01-2025  |   Day-13
++---------------------+
+    =   Character Stream (16 bit i/o)
+        +- Reader
+        |  +- BufferedReader
+        |  +- CharArrayReader
+        |  +- FilterReader
+        |  +- InputStreamReader
+        |  +- PipedReader
+        |  +- StringReader
+        +- Writer
+        |  +- BufferedWriter
+        |  +- CharArrayWriter
+        |  +- FilterWriter
+        |  +- OutputStreamWriter
+        |  +- PipedWriter
+        |  +- PrintWriter
+        |  +- StringWriter
+
+    =   Character stream is mainly used to read and write UNICODE character because
+        Unicode characters are 16 bit.
+
+        InputStream in = new FileInputStream("name.pdf");
+        Reader rs = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(rs);
+
+    =   ASSIGNMENT:
+        Write a program to read from the keyboard and write into a CSV file.
+        1.  Name
+        2.  Father Name
+        3.  Gender
+        4.  Date of Birth
+        5.  Mobile No.
+        6.  Email-id
+        7.  Address
+
++----------------------+
+| Thursday 30-01-2025  |   Day-14
++----------------------+
+    =   Conversion of string digit values to integer data type
+            Integer.parseInt(String value);
+
+    =   Conversion of string decimal value to double data type
+            Double.parseDouble(String value)
+
+    =   Anything that is added to a String data is automatically converted to String
+
+    =   What happens when you compile a .java file?
+        It generates a .class file which is called the byte code file.
+
+    =   A byte-code file can be re-engineered back to a .java file with the help of
+        API provided in jdk. The class java.lang.Class helps to convert a .java file
+        into a .class file.
+        
+        Check the program com.reflect.Reflection
+
++--------------------+
+| Friday 31-01-2025  |   Day-15
++--------------------+
+    =   java.util.Date
+    =   java.text.SimpleDateFormat
+    =   java.util.StringTokenizer
+        It split a string from a distinguished character
+
+    =   Java has provided API (classes and packages) to develop GUI programs.
+        There are 2 packages in Java which provide GUI classes.
+        1.  java.awt.*          Old and obsolate
+        2.  javax.swing.*
+
+        The swing package provides a set of container and components. Components are
+        added on the container.
+
+            CONTAINER                   COMPONENT
+            1. JFrame                   1.  JLabel
+            2. JPanel                   2.  JButton
+            3.                          3.  JTextField
+                                        4.  JRadioButton
+                                        5.  JComboBox
+
+
++--------------------+
+| Monday 03-02-2025  |   Day-16
++--------------------+
+    =   A container may not be set to a Layout Manager. To set the Layout Manager,
+        call the method setLayout(). There are 5 Layout Managers provided in java.awt
+        package.
+            1.  FlowLayout
+                FlowLayout turns the container to behave like a word processor. It adds
+                from left to right. When the container is full horizontally, it 
+                automatically breaks the line and components start getting added on
+                the second line.
+                +--------------------------------------+
+                | January February March April May     |
+                | June July August September October   |
+                | November December                    |
+                |                                      |
+                |                                      |
+                |                                      |
+                |                                      |
+                |                                      |
+                |                                      |
+                |                                      |
+                +--------------------------------------+
+
+            2.  BorderLayout
+                The BorderLayout divides the container into 5 parts. The 5 parts are
+                called NORTH, WEST, SOUTH, EAST and CENTER
+                +--------------------------------------+
+                |                 NORTH                |
+                +-------+----------------------+-------+
+                |       |                      |       |
+                |   W   |                      |   E   |
+                |   E   |        CENTER        |   A   |
+                |   S   |                      |   S   |
+                |   T   |                      |   T   |
+                |       |                      |       |
+                +-------+----------------------+-------+
+                |                SOUTH                 |
+                +--------------------------------------+
+
+            3.  GridLayout
+                The GridLayout divides the container into number of rows and columns
+                specified in the constructor of GridLayout.
+                new GridLayout(6,7) will divide the container into 6 rows and 7 columns.
+                +----+-----+-----+-----+----+----+-----+
+                |    |     |     |     |    |    |     |
+                +----+-----+-----+-----+----+----+-----+
+                |    |     |     |     |    |    |     |
+                +----+-----+-----+-----+----+----+-----+
+                |    |     |     |     |    |    |     |
+                +----+-----+-----+-----+----+----+-----+
+                |    |     |     |     |    |    |     |
+                +----+-----+-----+-----+----+----+-----+
+                |    |     |     |     |    |    |     |
+                +----+-----+-----+-----+----+----+-----+
+                |    |     |     |     |    |    |     |
+                +----+-----+-----+-----+----+----+-----+
+
+            4.  CardLayout
+            5.  GridBagLayout
+
+    =   ASSIGNMENT:
+        +----------------------------------------------+
+        |                                              |
+        |     Personal Information System              |
+        |                                              |
+        |                                              |
+        |   1. Name:        ||||||||||||||||||||       |
+        |   2. Parent:      ||||||||||||||||||||       |
+        |   3. Location     ||||||||||||||||||||       |
+        |   4. Mobile No    ||||||||||||||||||||       |
+        |   5. Email id     ||||||||||||||||||||       |
+        |                                              |
+        |           +----------+   +----------+        |
+        |           |  Save    |   |   Exit   |        |
+        |           +----------+   +----------+        |
+        |                                              |
+        +----------------------------------------------+
+
++---------------------+
+| Tuesday 04-02-2025  |   Day-17
++---------------------+
+    =   Programme written in PersonalInfo.java
+
+
++-----------------------+
+| Wednesday 05-02-2025  |   Day-18
++-----------------------+
+    =   Components:
+        1.  JRadioButton
+        2.  JCheckBox
+        3.  JComboBox
+        4.  JMenuBar
+        5.  JMenu
+        6.  JMenuItem
+
+    =   ASSIGNMENT:
+        +----------------------------------------------------------+
+        |                                                          |
+        |     Personal Information System                          |
+        |                                                          |
+        |                                                          |
+        |   1. Name:                    |||||||||||||||||||||||    |
+        |   2. Gender:                  x Male     x Female        |
+        |   3. Parent:                  |||||||||||||||||||||||    |
+        |   4. Innoculation             x DPT x Mesiles x Covid    |
+        |   5. Highest Qualification:   !!!!!!!!!!!!!!!!!!!!!!.    |
+        |   4. Location                 |||||||||||||||||||||||    |
+        |   4. Mobile No                |||||||||||||||||||||||    |
+        |   5. Email id                 |||||||||||||||||||||||    |
+        |                                                          |
+        |           +----------+   +----------+                    |
+        |           |  Save    |   |   Exit   |                    |
+        |           +----------+   +----------+                    |
+        |                                                          |
+        +----------------------------------------------------------+
+
+
++----------------------+
+| Thursday 06-02-2025  |   Day-19
++----------------------+
+    =   Components
+        1.  JMenuBar
+        2.  JMenu
+        3.  JMenuItem
+
+
++--------------------+
+| Friday 07-02-2025  |
++--------------------+
+    =   Class cancelled by Archi
+
++--------------------+
+| Monday 10-02-2025  |   Day-20
++--------------------+
+    =   Components
+        1.  JSplitPane
+        2.  JInternalFrame
+
++---------------------+
+| Tuesday 11-02-2025  |   Day-21
++---------------------+
+    =   MySQL is a free database engine. Currently MySQL is owned by Oracle Corporation 
+        Inc. US. Today MySQL is the most widely used database. MySQL has provided a command
+        console.
+
+        1.  Go to the DOS prompt
+        2.  Start MySQL by typing "mysql -uroot -proot"
+        3.  Once the MySQL command prompt is started, it shows mysql>
+        4.  MySQL understands SQL (Structured Query Language) language
+        5.  The SQL langauge is divided in 5 groups:
+            a.  DDL (Data Definition Language)
+                CREATE, DROP, ALTER, TRUNCATE
+            b.  DML (Data Manipulation Language)
+                INSERT, UPDATE, DELETE, CALL, EXPLAIN CALL, LOCK
+            c.  TCL (Transaction Control Language)
+                COMMIT, SAVEPOINT, ROLLBACK, SET TRANSACTION, SET CONSTRAINTS
+            d.  DQL (Data Query Language)
+                SELECT
+            e.  DCL (Data Control Language)
+                GRANT, REVOKE
+
+        MySQL work space. The entire space is divided into small databases.
+        To keep data in mysql, create your own database
+        +-------------------+---------------------+--------------------+
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |       Temp        |       Work          |       mysql_db     |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        +-------------------+---------------------+--------------------+
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |      Archi        |                     |                    |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        +-------------------+---------------------+--------------------+
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        |                   |                     |                    |
+        +-------------------+---------------------+--------------------+
+
+        =   To check the list of databases that exists in mysql type:
+            SHOW DATABASES;
+        =   To create a new database, type:
+            CREATE DATABASE IF NOT EXISTS archi;
+        =   To activate a particular database, type
+            USE archi;
+        =   To view the tables in a database, type
+            SHOW TABLES;
+        =   To create a table within a database, type
+            CREATE TABLE IF NOT EXISTS students(
+                slno        INT(6)          NOT NULL AUTO_INCREMENT,
+                name        VARCHAR(30)     NOT NULL UNIQUE,
+                gender      ENUM('F','M')   NOT NULL,
+                dob         DATE            DEFAULT NULL,
+                email_id    VARCHAR(30),
+                mobile_no   VARCHAR(12),
+                PRIMARY KEY(slno)
+            );
+        =   To insert data into a table, type
+            INSERT INTO students(name,gender,dob,email_id,mobile_no)
+                VALUE('Archi Kanungo', 'F', '2007-11-25', 'archi.kanungo2004@gmail.com', '7978665518');
+        =   To view the data in a table, type
+            SELECT * FROM students;
+        =   To delete a table from the database, type
+            DROP TABLE IF EXISTS students;
+        =   To delete the database from mysql work space, type
+            DROP DATABASE IF EXISTS archi;
+
++-----------------------+
+| Wednesday 19-02-2025  |   Day-22
++-----------------------+
+    =   Archi was absent due to fever from 20-02-2025 to 18-02-2025
+
+    =   JDBC stands for Java DataBase Connectivity.
+        It is a medium of connectivity between the database (MySQL) with Java programs.
+
+                             +-----+           +----------------+
+        +---------+          |  J  |           | MySQL          |
+        |  Java   |----------|  D  |-----------| Oracle         |
+        +---------+          |  B  |           | MS-SQL-Server  |
+                             |  C  |           | DB2            |
+                             +-----+           +----------------+
+
+    =   There are 4 types of connectivity in JDBC:
+        1.  Type-1: JDBC-ODBC Bridge        Comes with JDK
+        2.  Type-2: 
+        3.  Type-3:
+        4.  Type-4:                         Provided by the vendor
+
+    =   Please read https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html
+
+    =   There are 7 steps in JDBC.
+        1.  Step-1: import java.sql package (import java.sql.*;)
+        2.  Step-2: Load & Register driver
+        3.  Step-3: Create Connection object
+        4.  Step-4: Create Statement object
+        5.  Step-5: Create ResultSet object
+        6.  Step-6: Manipulate ResultSet
+        7.  Step-7: Close ResultSet, Statement & Connection
+
+
+        ResultSet
+        +------+--------+--------+------------+------------+---------------+---------------+
+        | slno | name   | gender | dob        | mobile_no  | location_desc | relation_desc |
+default>+------+--------+--------+------------+------------+---------------+---------------+ beforeFirst
+        |    1 | Alice  | F      | 2007-11-25 | 7978665518 | Cuttack       | Sibling       | first
+        |    2 | Akash  | M      | 2007-10-20 | 7978556610 | Bhubaneswar   | Cousin        | 2
+        |    3 | Amoha  | F      | 2007-11-08 | 7978665519 | Berhampur     | School Friend | 3
+        |    4 | Liya   | F      | 2007-10-25 | 7978665518 | Bhubaneswar   | Sibling       | 4
+        |    5 | Danish | M      | 2007-09-25 | 7978665518 | Jeypore       | Sibling       | 5
+        |    6 | Lucky  | M      | 2007-06-25 | 7978776610 | Rourkela      | Cousin        | last
+        +------+--------+--------+------------+------------+---------------+---------------+ afterLast
+
+
++--------------------+
+| Friday 20-02-2025  |   Day-23
++--------------------+
+    =   The ResultSet has two parts, the meta-data and the data.
+    =   What is a meta-data?
+        The data about data is meta-data.
+    
+    =   The resultset object contains a list of methods to scroll across the resultset.
+        When the resultset is newly created, the default cursor position is in the 
+        before-first place. To move the cursor every subsequent row, the next() method
+        is used. to scroll the resultset pointer to the previous row, the previous()
+        method is used.
+
+        List of resultset scrollable methods:
+        1. afterLast()   -  Moves the cursor to the end of the result set
+        2. beforeFirst() -  Moves the cursor to the begining of the result set
+        3. first()       -  Moves the cursor to the first row
+        4. last()        -  Moves the cursor to the last row
+        5. next()        -  Moves the cursor to relatively next row
+        6. previous()    -  Moves the cursor to relatively previous row
+        7. absolute(int) -  Moves the cursor to the specified row
+        8. relative(int) -  Moves the cursor to relatively + or - row
+        9. isAfterLast() -  Returns true if the pointer is in the afterlast position
+        10.isbeforeFirst()- Returns true if the pointer is in the beforefirst position
+
+    =   The Types class contains the following fields:
+          public static final int BIT;
+          public static final int TINYINT;
+          public static final int SMALLINT;
+          public static final int INTEGER;
+          public static final int BIGINT;
+          public static final int FLOAT;
+          public static final int REAL;
+          public static final int DOUBLE;
+          public static final int NUMERIC;
+          public static final int DECIMAL;
+          public static final int CHAR;
+          public static final int VARCHAR;
+          public static final int LONGVARCHAR;
+          public static final int DATE;
+          public static final int TIME;
+          public static final int TIMESTAMP;
+          public static final int BINARY;
+          public static final int VARBINARY;
+          public static final int LONGVARBINARY;
+          public static final int NULL;
+          public static final int OTHER;
+          public static final int JAVA_OBJECT;
+          public static final int DISTINCT;
+          public static final int STRUCT;
+          public static final int ARRAY;
+          public static final int BLOB;
+          public static final int CLOB;
+          public static final int REF;
+          public static final int DATALINK;
+          public static final int BOOLEAN;
+          public static final int ROWID;
+          public static final int NCHAR;
+          public static final int NVARCHAR;
+          public static final int LONGNVARCHAR;
+          public static final int NCLOB;
+          public static final int SQLXML;
+          public static final int REF_CURSOR;
+          public static final int TIME_WITH_TIMEZONE;
+          public static final int TIMESTAMP_WITH_TIMEZONE;
