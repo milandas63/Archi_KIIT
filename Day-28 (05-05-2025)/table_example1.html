@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>The Table Element</title>
+    </head>
+    <body>
+        <h1>The Table Element</h1>
+        <hr><br>
+        <table border="1" cellpadding="5" cellspacing="5">
+            <caption align="left">LIST OF STUDENTS</caption>
+            <thead>
+                <tr>
+                    <th>Slno</th>
+                    <th>Candidate's Name</th>
+                    <th>Father's Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Designation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="center">1</td>
+                    <td>Milan Das</td>
+                    <td>B K Das</td>
+                    <td>Male</td>
+                    <td>25/11/1963</td>
+                    <td>Faculty</td>
+                </tr>
+                <tr>
+                    <td align="center">2</td>
+                    <td>Archi Kanungo</td>
+                    <td>Kanungo</td>
+                    <td>Female</td>
+                    <td>04/03/2005</td>
+                    <td>Adv Java Student</td>
+                    </tr>
+                <tr>
+                    <td align="center">3</td>
+                    <td>Barshita Pattnaik</td>
+                    <td>Pattnaik</td>
+                    <td>Female</td>
+                    <td>24/07/2002</td>
+                    <td>Java Project</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><hr><br>
+        <!--
++-------+-------------------------------+-----------------------------------------------------------------------------------------------------------+
+|       |                               |                                           POPULATION                                                      |
+|       |                               |-----------------------------------------------------+-----------------------------------------------------|
+|       |                               |                           URBAN                     |                           RURAL                     |
+|       |                               |--------------------------+--------------------------+--------------------------+--------------------------|
+|       |                               |           MALE           |           FEMALE         |          MALE            |           FEMALE         |
+|       |                               |-----+------+-------+-----+-----+------+-------+-----+-----+------+-------+-----+-----+------+-------+-----|
+|  SLNO | NAME OF THE DISTRICT          | <5  | 6-15 | 16-25 | >25 | <5  | 6-15 | 16-25 | >25 | <5  | 6-15 | 16-25 | >25 | <5  | 6-15 | 16-25 | >25 |
+|-------+-------------------------------+-----+------+-------+-----+-----+------+-------+-----+-----+------+-------+-----+-----+------+-------+-----|
+|       |                               |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+|       |                               |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+|       |                               |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+|       |                               |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+|       |                               |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+|       |                               |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+|       |                               |     |      |       |     |     |      |       |     |     |      |       |     |     |      |       |     |
+        -->
+        <table border="1" cellpadding="5">
+            <tr>
+                <th rowspan="4" valign="bottom">SLNO</th>
+                <th rowspan="4" valign="bottom">NAME OF THE DISTRICT</th>
+                <th colspan="16">POPULATION</th>
+            </tr>
+            <tr>
+                <th colspan="8">URBAN</th>
+                <th colspan="8">RURAL</th>
+            </tr>
+            <tr>
+                <th colspan="4">MALE</th>
+                <th colspan="4">FEMALE</th>
+                <th colspan="4">MALE</th>
+                <th colspan="4">FEMALE</th>
+            </tr>
+            <tr>
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+                <th>&lt;5</th>
+                <th>6-15</th>
+                <th>16-25</th>
+                <th>&gt;25</th>
+            </tr>
+        </table>
+    </body>
+</html>
