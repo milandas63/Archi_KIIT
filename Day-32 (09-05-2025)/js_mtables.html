@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Multiplication Table</title>
+        <script>
+            function printTable() {
+                let start = parseInt(document.getElementById("from").value)
+                let end = parseInt(document.getElementById("to").value)
+                let count = 0
+                //alert('printTable function retrieves '+start+" and "+end)
+                document.writeln("<body>")
+                document.writeln("<table border='1'>")
+                document.writeln("<tr>")
+                for(let i=start; i<=end; i++) {
+                    document.writeln("<td>")
+                    document.writeln("<table>")
+                    for(let j=1; j<=10; j++) {
+                        document.writeln("<tr>")
+                        document.writeln("<td align='right'>"+i+"</td>")
+                        document.writeln("<td align='center'>x</td>")
+                        document.writeln("<td align='right'>"+j+"</td>")
+                        document.writeln("<td align='center'>=</td>")
+                        document.writeln("<td align='right'>"+(i*j)+"</td>")
+                        document.writeln("</tr>")
+
+                    }
+                    document.writeln("</table>")
+                    document.writeln("</td>")
+                    count = count+1
+                    if(count>=10) {
+                        document.writeln("</tr>")
+                        document.writeln("<tr>")
+                        count = 0
+                    }
+                }
+                document.writeln("</tr>")
+                document.writeln("</table>")
+                document.writeln("</body>")
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1><b><u>Multiplication Tables</b></u></h1>
+        <table>
+            <tr>
+                <td>From which table:</td>
+                <td><input type="text" name="from" id="from"></td>
+            </tr>
+            <tr>
+                <td>To which table:</td>
+                <td><input type="text" name="to" id="to"></td>
+            </tr>
+        </table>
+        <br><br>
+        <input type="button" value="Submit" onclick="printTable();">
+    </body>
+</html>

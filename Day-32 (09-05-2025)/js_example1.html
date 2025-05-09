@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>JavaScript Example</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            document.writeln("<h1 style='color:red;'>Hello world!</h1>")
+            document.writeln("<br><br>")
+            // Pyramid
+            let spaces = 45
+            let stars = 1
+            document.writeln("<tt>")
+            for(var i=0; i<10; i++) {
+                for(var j=0; j<spaces; j++) document.write("&nbsp;")
+                for(var j=0; j<stars; j++) document.write("*")
+                document.writeln("<br>")
+                spaces = spaces-1
+                stars = stars+2
+            }
+            document.writeln("</tt>")
+            document.writeln("<br><br>")
+
+            spaces = 45
+            document.writeln("<tt>")
+            for(var i=0; i<10; i++) {
+                for(var j=1; j<=spaces; j++) document.write("&nbsp;")
+                for(var j=1; j<=i; j++) document.write(j)
+                for(var j=(i-1); j>=1; j--) document.write(j)
+                document.writeln("<br>")
+                spaces = spaces-1
+            }
+            document.writeln("</tt>")
+            document.writeln("<br><br>")
+
+        </script>
+    </body>
+</html>

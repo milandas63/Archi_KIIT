@@ -1,0 +1,9 @@
+.light_line {
+    color: black;
+    background-color: white;
+}
+
+.deep_line {
+    color: blue;
+    background-color: lightgray;
+}
