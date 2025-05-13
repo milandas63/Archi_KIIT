@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Hello world</title>
+        <script>
+            function dom1() {
+                let obj = document.getElementById("data1")
+                let tabObj = obj.parentElement
+                document.writeln(obj.toString())
+                document.writeln(tabObj.toString())
+                document.writeln(tabObj.parentElement.toString())
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Data Set</h1>
+        <table>
+            <tr>
+                <td>1</td>
+                <td id='data1'>JavaScript Tutorial</td>
+            </tr>
+        </table>
+        <br><br>
+        <input type="button" value="Click" onclick="dom1();">
+    </body>
+</html>
