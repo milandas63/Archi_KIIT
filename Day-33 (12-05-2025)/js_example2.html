@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script>
+            function mtables() {
+                //window.location.href = "https://www.google.com"
+                let nametext = document.getElementById("name").value
+                let char;
+                for(let i=0; i<nametext.length; i++) {
+                    char = nametext.charCodeAt(i)
+                    alert("checking..."+char)
+                    if(char<65 || char>90) {
+                        alert("Wrong Data")
+                        return false;
+                    }
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <form action="alert('Correct data');" onsubmit="return mtables();">
+        <!-- form action="https://www.google.com" -->
+            <label for="">Candidate's Name (upper-case)? </label><br>
+            <input type="text" name="name" id="name">
+            <br><br>
+            <input type="submit" value=" Save Data ">
+        </form>
+    </body>
+</html>
