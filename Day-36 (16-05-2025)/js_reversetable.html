@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Table</title>
+    <script>
+        function reverse() {
+            let tabObj = document.getElementById("table")
+
+            document.writeln("<html>")
+            document.writeln("<body>")
+            document.writeln("<table>")
+            for(let i=tabObj.rows.length-1; i>0; i--) {
+                document.writeln("<tr>")
+                for(let j=0; j<tabObj.rows[i].cells.length; j++) {
+                    document.writeln("<td>")
+                    document.writeln(tabObj.rows[i].cells[j].innerHTML)
+                    document.writeln("</td>")
+                }
+                document.writeln("</tr>")
+            }
+            document.writeln("</table>")
+            document.writeln("</body>")
+            document.writeln("</html>")
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Reverse Table</h1>
+    <hr><br>
+    <table border="1" id="table">
+        <tr>
+            <th>SLNO</th>
+            <th>CANDIDATE'S NAME</th>
+            <th>FATHER'S NAME</th>
+            <th>DATE OF BIRTH</th>
+            <th>PHONE NO</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Archi Kanungo</td>
+            <td>Sunil Kanungo</td>
+            <td>12-06-2008</td>
+            <td>4587548556</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Milan Das</td>
+            <td>B K Das</td>
+            <td>25-11-1963</td>
+            <td>9778911223</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Sonali Das</td>
+            <td>Dillip Das</td>
+            <td>06-08-2003</td>
+            <td>7978168568</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Rashmi Das</td>
+            <td>B R Das</td>
+            <td>07-09-2004</td>
+            <td>9925254767</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <button onclick="reverse();">Reverse</button>
+</body>
+</html>
