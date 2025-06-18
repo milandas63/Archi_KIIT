@@ -5,7 +5,8 @@
     <!-- welcome-file>mtables.html</welcome-file> -->
     <!-- <welcome-file>primeno.html</welcome-file> -->
     <!--  <welcome-file>contact.html</welcome-file> -->
-    <welcome-file>pyramid.jsp</welcome-file>
+    <!--  <welcome-file>pyramid.jsp</welcome-file> -->
+    <welcome-file>mtables.jsp</welcome-file>
   </welcome-file-list>
   
   <servlet>
